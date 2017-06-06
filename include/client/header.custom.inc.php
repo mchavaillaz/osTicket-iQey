@@ -35,7 +35,7 @@ if ($lang) {
 
 		<title><?php echo Format::htmlchars($title); ?></title>
 
-		<link type="text/css" rel="stylesheet" href="<?php echo ASSETS_PATH; ?>css/myvaccines.css">
+		<link type="text/css" rel="stylesheet" href="<?php echo ASSETS_PATH; ?>css/iqey.css">
 
 		<script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/jquery-ui-1.10.3.custom.min.js"></script>
