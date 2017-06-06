@@ -1,0 +1,21 @@
+.keep
+php53.cgi
+setup/cli/modules/importer
+*.sw[a-z]
+.DS_Store
+.vagrant
+._.DS_Store
+Vagrantfile
+
+# Staging directory used for packaging script
+stage
+
+# Ignore mPDF temp files
+include/mpdf/ttfontdata
+include/mpdf/tmp
+nbproject/
+/.idea/
+include/ost-config.php
+.buildpath
+.project
+.settings

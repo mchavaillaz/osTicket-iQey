@@ -1,0 +1,8 @@
+{
+  "languages": [
+    "fr",
+    "de"
+  ],
+  "inputDir": "/",
+  "outputDir": "../i18n"
+}
