@@ -22,7 +22,7 @@ body {
 
 input {
     font-family: Helvetica, Arial;
-    font-size: 14px;
+    font-size: 18px;
     margin-right: 5px;
 }
 
@@ -43,7 +43,7 @@ a:hover, .ui-widget-content a {
 }
 
 a:visited {
-    color: black;
+    color: white;
 }
 
 .clear {
@@ -55,56 +55,39 @@ a:visited {
 }
 
 .button-primary {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    color: black;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px #F6920B solid;
-    background: #FEC13C;
-    background-image: -ms-linear-gradient(bottom, #F6920B 0%, #FEC13C 100%);
-    background-image: -moz-linear-gradient(bottom, #F6920B 0%, #FEC13C 100%);
-    background-image: -o-linear-gradient(bottom, #F6920B 0%, #FEC13C 100%);
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #F6920B), color-stop(1, #FEC13C));
-    background-image: -webkit-linear-gradient(bottom, #F6920B 0%, #FEC13C 100%);
-    background-image: linear-gradient(to top, #F6920B 0%, #FEC13C 100%);
+
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    background-color: #5a86c4;
+
+
+
 }
 
 .button-primary:hover {
     background-image: none;
     cursor: hand;
     cursor: pointer;
+    background-color: #a1c1ee;
+
 }
 
 .button-secondary {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    color: black;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px #cdcdcd solid;
-    background: #EAEAEA;
-    background-image: -ms-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);
-    background-image: -moz-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);
-    background-image: -o-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD), color-stop(0.5, #EAEAEA), color-stop(1, #FDFDFD));
-    background-image: -webkit-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);
-    background-image: linear-gradient(to bottom, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    background-color: #5a86c4;
 }
 
 .button-secondary:hover {
-    border: 1px #F6920B solid;
-    background: #FEC13C;
-    background-image: -ms-linear-gradient(bottom, #F6920B 0%, #FEC13C 100%);
-    background-image: -moz-linear-gradient(bottom, #F6920B 0%, #FEC13C 100%);
-    background-image: -o-linear-gradient(bottom, #F6920B 0%, #FEC13C 100%);
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #F6920B), color-stop(1, #FEC13C));
-    background-image: -webkit-linear-gradient(bottom, #F6920B 0%, #FEC13C 100%);
-    background-image: linear-gradient(to top, #F6920B 0%, #FEC13C 100%);
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    background-color: #a1c1ee;
 }
 
 .button-big {
@@ -420,7 +403,7 @@ a.button.but-enter {
 }
 
 .top-bar.public {
-    background: url('../images/img_bg_frame_public.jpg') no-repeat right top;
+    /*background: url('../images/img_bg_frame_public.jpg') no-repeat right top;*/
 }
 
 .top-bar.professional {
@@ -497,6 +480,7 @@ a.button.but-enter {
 .wrapper {
     background: #fdfdfd;
     min-width: 950px;
+
 }
 
 .wrapper.content {
@@ -504,17 +488,21 @@ a.button.but-enter {
 }
 
 .wrapper.items {
-    background: #EAEAEA;
-    background-image: -ms-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);
-    background-image: -moz-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);
-    background-image: -o-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD), color-stop(0.5, #EAEAEA), color-stop(1, #FDFDFD));
-    background-image: -webkit-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);
-    background-image: linear-gradient(to bottom, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);
+    background: #f2f2f2;
+    /*background-image: -ms-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);*/
+    /*background-image: -moz-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);*/
+    /*background-image: -o-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);*/
+    /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD), color-stop(0.5, #EAEAEA), color-stop(1, #FDFDFD));*/
+    /*background-image: -webkit-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);*/
+    /*background-image: linear-gradient(to bottom, #FDFDFD 0%, #EAEAEA 50%, #FDFDFD 100%);*/
 }
 
 .wrapper.bg-public {
-    background: url('../images/background_repeat_public.jpg') repeat-x;
+   background: url('../images/img_bg_frame_public.jpg') no-repeat;
+    background-position: top right;
+   background-color: #133157;
+
+
 }
 
 .wrapper.bg-professional {
@@ -522,11 +510,11 @@ a.button.but-enter {
 }
 
 .faq-search-field {
-    padding-left: 6px;
+    padding-left: 8px;
     border-radius: 4px;
     border: 1px solid #cbcbcb;
-    height: 41px;
-    width: 260px;
+    height: 45px;
+    width: 320px;
 }
 
 .container.search {
@@ -549,7 +537,7 @@ div.piedPage {
 }
 
 .table-center td {
-    padding: 0 50px 0 50px;
+    padding: 15px 50px 0 50px;
     text-align: center;
 }
 
@@ -619,7 +607,8 @@ div.piedPage {
 }
 
 .faq-table-search {
-    margin: 10px auto;
+    margin:auto;
+    padding: 20px;
 }
 
 .button.faq-search {
@@ -2192,7 +2181,7 @@ div.profile_separator {
 
 .footer .credits_new span.version_new {
     font-size: 9px !important;
-    color: #03521F;
+    color: #133056;
 }
 
 .gta-modal {
@@ -2461,7 +2450,7 @@ table.list th a {
 }
 
 .languages, .languages a {
-    color: #03521F;
+    color: #133056;
 }
 
 .languages a.selected, .languages a.selected:hover {
@@ -2469,7 +2458,7 @@ table.list th a {
 }
 
 .languages a:hover {
-    color: #6EBB0B;
+    color: #5a86c4;
 }
 
 .top-bar.small {
@@ -2483,7 +2472,7 @@ table.list th a {
 }
 
 .items .on a {
-    color: #03521F;
+    color: #5886c5;
 }
 
 .items .item.current a {
@@ -2495,7 +2484,7 @@ ul.contentActions li {
 }
 
 .footer a {
-    color: #03521F
+    color: #133056
 }
 
 .accordionHeader .accordionToggle {

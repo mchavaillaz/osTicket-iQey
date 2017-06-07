@@ -11,18 +11,10 @@ $title = __('Frequently Asked Questions');
 $text = __('The FAQ has two categories: For everybody and specifically for professionals.');
 require(CLIENTINC_DIR . 'page-header.inc.php');
 ?>
-<div class="wrapper">
-	<table class="table-center">
-		<tr>
-			<td>
-				<img class="<?php echo ($pageContext == $myVaccinesUtilities::CONTEXT_PUBLIC) ? "" : "item-hidden"; ?>"
-					 src="<?php echo ASSETS_PATH; ?>images/icons/faq_green.png">
-				<img class="<?php echo ($pageContext == $myVaccinesUtilities::CONTEXT_PROFESSIONAL) ? "" : "item-hidden"; ?>"
-					 src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
-			</td>
-		</tr>
-	</table>
-</div>
+
+
+
+
 <!-- Switch FAQ context For Everybody/For Professional -->
 <div class="wrapper">
 	<div class="container">
@@ -36,18 +28,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
             ->filter(array('faq_count__gt' => 0));
         if ($categories->exists(true)) {
             ?>
-			<table class="faq-table-tab">
-				<tr>
-					<td onclick="publicFAQChoice();"
-						class="faq-tab <?php echo($pageContext === $myVaccinesUtilities::CONTEXT_PUBLIC ? "faq-public-choice-active" : "faq-choice-inactive") ?>">
-                        <?php echo __('For everybody'); ?>
-					</td>
-					<td onclick="professionalFAQChoice();"
-						class="faq-tab <?php echo($pageContext === $myVaccinesUtilities::CONTEXT_PROFESSIONAL ? "faq-professional-choice-active" : "faq-choice-inactive") ?>">
-                        <?php echo __('For professionals'); ?>
-					</td>
-				</tr>
-			</table>
+
             <?php
         } else {
             echo __('NO FAQs found');
@@ -55,11 +36,35 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
         ?>
 	</div>
 </div>
+
+
+
+
+
+
 <!-- Search in FAQ form -->
 <?php
 include CLIENTINC_DIR . 'search-in-faq.inc.php';
 ?>
+
+
+
+<div class="wrapper">
+	<table class="table-center">
+		<tr>
+			<td>
+				<img class="<?php echo ($pageContext == $myVaccinesUtilities::CONTEXT_PUBLIC) ? "" : "item-hidden"; ?>"
+					 src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
+				<img class="<?php echo ($pageContext == $myVaccinesUtilities::CONTEXT_PROFESSIONAL) ? "" : "item-hidden"; ?>"
+					 src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
+			</td>
+		</tr>
+	</table>
+</div>
+
 <div class="separator"></div>
+
+
 <!-- FAQ categories -->
 <div class="wrapper">
 	<div class="container">

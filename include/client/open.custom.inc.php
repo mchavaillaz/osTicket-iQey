@@ -36,6 +36,7 @@ $pageContext = $myVaccinesUtilities->getCurrentContext($_GET['context']);
 <!-- Top bar section -->
 <?php
 $title = __('Create new request');
+$title = __('Create new request');
 $text = __('Unable to find an answer to your question in the FAQ?<br>Create your request below.');
 require(CLIENTINC_DIR . 'page-header.inc.php');
 ?>

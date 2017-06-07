@@ -132,11 +132,11 @@ if ($lang) {
 						<tr>
 							<td valign="top" style="text-align:center; border-right:1px solid #eee; width: 190px; padding: 10px 10px 10px 0">
 								<a href="<?php echo ROOT_PATH . 'index.php' ?>">
-									<img src="<?php echo ASSETS_PATH; ?>images/meineimpfungen-web-logo-2015.png" width="310" height="86" alt="Meineimpfungen">
+									<img src="<?php echo ASSETS_PATH; ?>images/iqey_logo.jpg" width="179" height="65" alt="iqey">
 								</a>
 							</td>
 							<td>
-								<h1 style="color: black"><?php echo __('The Swiss electronic vaccination record'); ?></h1>
+
 							</td>
 						</tr>
 					</table>
