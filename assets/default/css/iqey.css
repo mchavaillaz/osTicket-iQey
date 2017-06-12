@@ -279,6 +279,12 @@ a.button.but-enter {
     font-weight: bold;
 }
 
+.faq-category-link {
+    padding-left: 10px;
+    line-height: 25px;
+    font-size: 16px;
+}
+
 .faq-search-result a:hover {
     text-decoration: underline;
 }
