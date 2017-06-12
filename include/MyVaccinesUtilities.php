@@ -34,4 +34,28 @@ class MyVaccinesUtilities
 
         return $categoryExplodedArray[1];
     }
+
+    /**
+     * Get all categories for the given QuerySet.<br>
+     * The array contains all FAQ categories with id, icon, title and the amount of topic for current category
+     *
+     * @param $categoryQuerySet QuerySet the categories to parse
+     * @return array[Category] the categories found for the given context. Empty array when no category present in the QuerySet.
+     */
+    function getCategoriesArray($categoryQuerySet)
+    {
+        $resultArray = array();
+        // Get the categories for the given context
+        foreach ($categoryQuerySet as $category) {
+            // Build the category data
+            $categoryArray = array();
+            $categoryArray['id'] = $category->getId();
+            $categoryArray['icon'] = $this->getCategoryIcon($category->getLocalName());
+            $categoryArray['title'] = $this->getCategoryTitle($category->getLocalName());
+            $categoryArray['amountTopic'] = $category->faq_count;
+
+            array_push($resultArray, $categoryArray);
+        }
+        return $resultArray;
+    }
 }
