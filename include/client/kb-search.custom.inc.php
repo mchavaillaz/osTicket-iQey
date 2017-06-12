@@ -5,7 +5,7 @@ $pageContext = $myVaccinesUtilities->getCurrentContext($_GET['context']);
 <!-- Top bar section -->
 <?php
 $title = __('Frequently Asked Questions');
-$text = __('The FAQ has two categories: For everybody and specifically for professionals.');
+$text = __('This page contains the FAQ.');
 require(CLIENTINC_DIR . 'page-header.inc.php');
 ?>
 <!-- Search in FAQ form -->

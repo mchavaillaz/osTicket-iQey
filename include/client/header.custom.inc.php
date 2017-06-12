@@ -30,7 +30,7 @@ if ($lang) {
 		<meta name="keywords" content="osTicket, Customer support system, support ticket system">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title><?php echo Format::htmlchars($title); ?></title>
+		<title>Support iQey</title>
 
 		<link type="text/css" rel="stylesheet" href="<?php echo ASSETS_PATH; ?>css/iqey.css">
 
