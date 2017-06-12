@@ -168,7 +168,7 @@ class Form {
         if (isset($options['instructions']))
             $this->instructions = $options['instructions'];
         $form = $this;
-        $template = $options['template'] ?: 'dynamic-form.custom.tmpl.php';
+        $template = $options['template'] ?: 'dynamic-form.tmpl.php';
         if ($staff)
             include(STAFFINC_DIR . 'templates/' . $template);
         else
