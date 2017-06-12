@@ -96,7 +96,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 				</div>
 				<div style="display: table-cell; vertical-align: middle">
 					<a href="#reply">
-						<img src="<?php echo ASSETS_PATH; ?>images/icons/anchor.png">
+						<img src="<?php echo ASSETS_PATH; ?>images/icons/anchor.png" style="width: 30px; height: 30px;">
 					</a>
 				</div>
 			</td>
