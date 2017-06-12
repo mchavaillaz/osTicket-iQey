@@ -29,9 +29,6 @@ if ($info['topicId'] && ($topic = Topic::lookup($info['topicId']))) {
         $forms[] = $F;
     }
 }
-
-// Get the current page context
-$pageContext = $myVaccinesUtilities->getCurrentContext($_GET['context']);
 ?>
 <!-- Top bar section -->
 <?php
@@ -45,18 +42,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 	<table class="table-center">
 		<tr>
 			<td>
-                <?php
-                if ($pageContext == $myVaccinesUtilities::CONTEXT_PUBLIC) {
-                    ?>
-					<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket.png">
-                    <?php
-                } else {
-                    ?>
-					<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket_blue.png">
-                    <?php
-                }
-                ?>
-
+				<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket.png">
 			</td>
 		</tr>
 	</table>
@@ -70,11 +56,11 @@ if (!$thankYouText) {
 			<table class="table-center left">
 				<tr>
 					<td>
-						<img src="<?php echo ASSETS_PATH; ?>images/icons/info_<?php echo $pageContext ?>.png">
+						<img src="<?php echo ASSETS_PATH; ?>images/icons/info.png">
 					</td>
 					<td>
 						<p>
-							<?php echo __('Step 1: Please enter your contact details and choose a topic to allow us a fast processing of your request.'); ?>
+                            <?php echo __('Step 1: Please enter your contact details and choose a topic to allow us a fast processing of your request.'); ?>
 						</p>
 						<p>
                             <?php echo __('Step 2: Enter you question. You can also attach files to you question.'); ?>
@@ -95,7 +81,7 @@ if (!$thankYouText) {
 		</div>
     <?php } ?>
 	<!-- Ticket form -->
-	<form id="ticketForm" method="post" action="open.php?context=<?php echo $pageContext; ?>" enctype="multipart/form-data">
+	<form id="ticketForm" method="post" action="open.php" enctype="multipart/form-data">
         <?php csrf_token(); ?>
 		<input type="hidden" name="a" value="open">
 		<table class="table-center-open-ticket">
@@ -244,39 +230,5 @@ if (!$thankYouText) {
         } else {
             $('#captchaTable').hide();
         }
-
-        // Get the <tr> that contains the EAN/GLN input
-        var trEanGln = $($(".table-center-open-ticket span:contains('EAN/GLN')")[0])
-            .parentsUntil('tr').parent();
-
-        // Get the parameters in the url
-        var params = parseQueryString(location.href);
-
-        // Show/Hide manually the EAN/GLN input according to the context (public/professional)
-        if (params['context'] == 'public') {
-            trEanGln.hide();
-        } else {
-            trEanGln.show();
-        }
     });
-
-    /**
-     * Parse all parameters from the url.
-     *
-     * @returns object with {"param": "value"}
-     */
-    var parseQueryString = function () {
-        // Tools
-        var str = window.location.search;
-        var objURL = {};
-
-        str.replace(
-            new RegExp("([^?=&]+)(=([^&]*))?", "g"),
-            function ($0, $1, $2, $3) {
-                objURL[$1] = $3;
-            }
-        );
-
-        return objURL;
-    };
 </script>

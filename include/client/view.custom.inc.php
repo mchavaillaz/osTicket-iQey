@@ -1,7 +1,4 @@
 <?php
-// Get the current page context
-$pageContext = $myVaccinesUtilities->getCurrentContext($_GET['context']);
-
 if (!defined('OSTCLIENTINC') || !$thisclient || !$ticket || !$ticket->checkUserAccess($thisclient)) die('Access Denied!');
 
 $info = ($_POST && $errors) ? Format::htmlchars($_POST) : array();
@@ -42,17 +39,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 	<table class="table-center">
 		<tr>
 			<td>
-                <?php
-                if ($pageContext == $myVaccinesUtilities::CONTEXT_PUBLIC) {
-                    ?>
-					<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket.png">
-                    <?php
-                } else {
-                    ?>
-					<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket_blue.png">
-                    <?php
-                }
-                ?>
+				<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket.png">
 			</td>
 		</tr>
 	</table>
@@ -109,7 +96,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 				</div>
 				<div style="display: table-cell; vertical-align: middle">
 					<a href="#reply">
-						<img src="<?php echo ASSETS_PATH; ?>images/icons/anchor_<?php echo $pageContext ?>.png">
+						<img src="<?php echo ASSETS_PATH; ?>images/icons/anchor.png">
 					</a>
 				</div>
 			</td>
@@ -130,7 +117,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 if (!$ticket->isClosed() || $ticket->isReopenable()) { ?>
 	<div class="wrapper">
 		<form id="reply"
-			  action="tickets.php?context=<?php echo $pageContext ?>&id=<?php echo $ticket->getId() . '#reply' ?>"
+			  action="tickets.php?id=<?php echo $ticket->getId() . '#reply' ?>"
 			  name="reply"
 			  method="post"
 			  enctype="multipart/form-data">
