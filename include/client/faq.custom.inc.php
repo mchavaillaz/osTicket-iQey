@@ -1,7 +1,4 @@
 <?php
-// Get the current page context
-$pageContext = $myVaccinesUtilities->getCurrentContext($_GET['context']);
-
 if (!defined('OSTCLIENTINC') || !$faq || !$faq->isPublished()) die('Access Denied');
 $category = $faq->getCategory();
 ?>
@@ -16,17 +13,16 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 	<div class="container">
 		<div class="column center">
 			<div class="breadcrumbs">
-				<a href="index.php<?php echo '?context=' . $pageContext; ?>">
+				<a href="index.php">
                     <?php echo __('All Categories'); ?>
 				</a>
 				&raquo;
-				<a href="faq.php?cid=<?php echo $category->getId() . '&context=' . $pageContext ?>">
+				<a href="faq.php?cid=<?php echo $category->getId()?>">
                     <?php
                     // Get the full category name after sanitize
                     $categorySanitized = Format::htmlchars($category->getLocalName());
 
                     // Get the context and the category title from the sanitized string
-                    $categoryContext = $myVaccinesUtilities->getCategoryContext($categorySanitized);
                     $categoryIcon = $myVaccinesUtilities->getCategoryIcon($categorySanitized);
                     $categoryTitle = $myVaccinesUtilities->getCategoryTitle($categorySanitized);
 
@@ -53,7 +49,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
             <?php echo $faq->getLocalAnswerWithImages(); ?>
 			<br>
 			<br>
-			<a href="faq.php?cid=<?php echo $category->getId() . '&context=' . $pageContext ?>" class="button-primary button-small">
+			<a href="faq.php?cid=<?php echo $category->getId()?>" class="button-primary button-small">
                 <?php
                 echo __('Back');
                 ?>
