@@ -1,7 +1,4 @@
 <?php
-// Get the current page context
-$pageContext = $myVaccinesUtilities->getCurrentContext($_GET['context']);
-
 if (!defined('OSTCLIENTINC') || !$category || !$category->isPublic()) die('Access Denied');
 ?>
 <!-- Top bar section -->
@@ -15,7 +12,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 	<div class="container">
 		<div class="column center">
 			<div class="breadcrumbs">
-				<a href="index.php<?php echo '?context=' . $pageContext; ?>">
+				<a href="index.php">
                     <?php echo __('All Categories'); ?>
 				</a>
 				&raquo;
@@ -25,7 +22,6 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
                     $categorySanitized = Format::htmlchars($category->getLocalName());
 
                     // Get the context and the category title from the sanitized string
-                    $categoryContext = $myVaccinesUtilities->getCategoryContext($categorySanitized);
                     $categoryIcon = $myVaccinesUtilities->getCategoryIcon($categorySanitized);
                     $categoryTitle = $myVaccinesUtilities->getCategoryTitle($categorySanitized);
 
@@ -59,9 +55,8 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
                 echo '<div id="faq"><ol>';
                 foreach ($faqs as $F) {
                     $attachments = $F->has_attachments ? '<span class="Icon file"></span>' : '';
-                    echo sprintf('<li><a href="faq.php?id=%d&context=%s" style="color: black;">%s</a></li>',
+                    echo sprintf('<li><a href="faq.php?id=%d" style="color: black;">%s</a></li>',
                         $F->getId(),
-                        $pageContext,
                         Format::htmlchars($F->getLocalQuestion()));
                 }
                 echo '</ol></div>';
@@ -71,7 +66,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
             ?>
 			<br>
 			<br>
-			<a href="index.php<?php echo '?context=' . $pageContext; ?>" class="button-primary button-small">
+			<a href="index.php" class="button-primary button-small">
                 <?php
                 echo __('Back');
                 ?>
