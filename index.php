@@ -50,7 +50,7 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
 			</td>
 			<td style="padding-bottom: 15px;">
 				<a href="<?php echo $newTicketUrl; ?>">
-					<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket_blue.png">
+					<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket.png">
 				</a>
 			</td>
 		</tr>

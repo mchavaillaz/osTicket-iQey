@@ -48,7 +48,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
                 <?php
                 if ($pageContext == $myVaccinesUtilities::CONTEXT_PUBLIC) {
                     ?>
-					<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket_green.png">
+					<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket.png">
                     <?php
                 } else {
                     ?>
