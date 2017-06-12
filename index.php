@@ -19,9 +19,6 @@ require_once INCLUDE_DIR . 'class.page.php';
 // Tool
 $myVaccinesUtilities = new MyVaccinesUtilities();
 
-// Get the current page context
-$pageContext = $myVaccinesUtilities->getCurrentContext($_GET['context']);
-
 $section = 'home';
 require(CLIENTINC_DIR . 'header.custom.inc.php');
 ?>
@@ -43,38 +40,19 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
 		<tr>
             <?php
             // Build the urls according to the page context
-            $faqUrl = 'kb/index.php?context=' . $pageContext;
-            $newTicketUrl = 'open.php?context=' . $pageContext;
-
-            if ($pageContext == $myVaccinesUtilities::CONTEXT_PUBLIC) {
-                ?>
-				<td style="padding-bottom: 15px;">
-					<a href="<?php echo $faqUrl; ?>">
-						<img src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
-					</a>
-				</td>
-				<td style="padding-bottom: 15px;">
-					<a href="<?php echo $newTicketUrl; ?>">
-						<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket_green.png">
-					</a>
-				</td>
-                <?php
-            } else {
-                ?>
-				<td style="padding-bottom: 15px;">
-					<a href="<?php echo $faqUrl; ?>">
-						<img src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
-					</a>
-				</td>
-				<td style="padding-bottom: 15px;">
-					<a href="<?php echo $newTicketUrl; ?>">
-						<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket_blue.png">
-					</a>
-				</td>
-                <?php
-            }
+            $faqUrl = 'kb/index.php';
+            $newTicketUrl = 'open.php';
             ?>
-
+			<td style="padding-bottom: 15px;">
+				<a href="<?php echo $faqUrl; ?>">
+					<img src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
+				</a>
+			</td>
+			<td style="padding-bottom: 15px;">
+				<a href="<?php echo $newTicketUrl; ?>">
+					<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket_blue.png">
+				</a>
+			</td>
 		</tr>
 		<tr>
             <?php if ($BUTTONS) { ?>

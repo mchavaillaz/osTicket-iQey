@@ -1,7 +1,4 @@
 <?php
-// Get the current page context
-$pageContext = $myVaccinesUtilities->getCurrentContext($_GET['context']);
-
 $title = ($cfg && is_object($cfg) && $cfg->getTitle())
     ? $cfg->getTitle() : 'osTicket :: ' . __('Support Ticket System');
 $signin_url = ROOT_PATH . "login.php"
@@ -152,14 +149,9 @@ if ($lang) {
                 if ($nav && ($navs = $nav->getNavLinks()) && is_array($navs)) {
                     foreach ($navs as $name => $nav) {
                         if ($name != 'status') {
-                            if ($name == 'tickets') {
-                                $contextParam = '&context=';
-                            } else {
-                                $contextParam = '?context=';
-                            }
                             echo sprintf('<div class="%s"><a href="%s">%s</a></div>',
                                 $nav['active'] ? 'item on' : 'item',
-                                (ROOT_PATH . $nav['href']) . $contextParam . $pageContext,
+                                (ROOT_PATH . $nav['href']),
                                 $nav['desc']);
                         }
                     }
