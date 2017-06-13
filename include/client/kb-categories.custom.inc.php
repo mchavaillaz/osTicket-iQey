@@ -47,11 +47,7 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
 <div class="wrapper">
 	<div class="container">
 		<div class="column center">
-			<table
-					id="<?php echo $currentContext . 'Categories' ?>"
-					cellpadding="15"
-					width="100%"
-					class="<?php echo ($currentContext == $pageContext) ? "" : "item-hidden"; ?>">
+			<table id="Categories" cellpadding="15" width="100%">
                 <?php
                 $cpt = 0;
                 // Get the categories as array
@@ -81,7 +77,7 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
                             </span>
 						<br>
 						<br>
-						<a href="faq.php?cid=<?php echo $categoryId . '&context=' . $pageContext ?>"
+						<a href="faq.php?cid=<?php echo $categoryId ?>"
 						   class="button-secondary button-small">
                             <?php echo __('Enter'); ?>
 						</a>

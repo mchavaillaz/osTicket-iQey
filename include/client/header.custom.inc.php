@@ -3,7 +3,7 @@ $title = ($cfg && is_object($cfg) && $cfg->getTitle())
     ? $cfg->getTitle() : 'osTicket :: ' . __('Support Ticket System');
 $signin_url = ROOT_PATH . "login.php"
     . ($thisclient ? "?e=" . urlencode($thisclient->getEmail()) : "");
-$signout_url = ROOT_PATH . "logout.php?auth=" . $ost->getLinkToken() . '&context=' . $pageContext;
+$signout_url = ROOT_PATH . "logout.php?auth=" . $ost->getLinkToken();
 
 header("Content-Type: text/html; charset=UTF-8");
 if (($lang = Internationalization::getCurrentLanguage())) {

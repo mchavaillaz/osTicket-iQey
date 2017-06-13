@@ -4,7 +4,6 @@
         if ($cfg && $cfg->isKnowledgebaseEnabled()) { ?>
 			<form method="get" action="<?php echo ROOT_PATH; ?>kb/faq.php">
 				<input type="hidden" name="a" value="search"/>
-				<input type="hidden" name="context" value="<?php echo $pageContext; ?>">
 				<table class="faq-table-search">
 					<tr>
 						<td>
