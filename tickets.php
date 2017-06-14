@@ -15,10 +15,10 @@
  * vim: expandtab sw=4 ts=4 sts=4:
  **********************************************************************/
 require('secure.inc.php');
-require_once(INCLUDE_DIR . 'MyVaccinesUtilities.php');
+require_once(INCLUDE_DIR . 'IQeyUtilities.php');
 
 // Tool
-$myVaccinesUtilities = new MyVaccinesUtilities();
+$iQeyUtilities = new IQeyUtilities();
 
 if (!is_object($thisclient) || !$thisclient->isValid()) die('Access denied'); //Double check again.
 

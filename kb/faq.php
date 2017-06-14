@@ -15,10 +15,10 @@
  **********************************************************************/
 require('kb.inc.php');
 require_once(INCLUDE_DIR . 'class.faq.php');
-require_once(INCLUDE_DIR . 'MyVaccinesUtilities.php');
+require_once(INCLUDE_DIR . 'IQeyUtilities.php');
 
 // Tools
-$myVaccinesUtilities = new MyVaccinesUtilities();
+$iQeyUtilities = new IQeyUtilities();
 $faq = $category = null;
 
 if ($_REQUEST['id'] && !($faq = FAQ::lookup($_REQUEST['id'])))

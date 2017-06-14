@@ -14,10 +14,10 @@
  * vim: expandtab sw=4 ts=4 sts=4:
  **********************************************************************/
 require('client.inc.php');
-require_once(INCLUDE_DIR . 'MyVaccinesUtilities.php');
+require_once(INCLUDE_DIR . 'IQeyUtilities.php');
 
 // Tool
-$myVaccinesUtilities = new MyVaccinesUtilities();
+$iQeyUtilities = new IQeyUtilities();
 
 define('SOURCE', 'Web'); //Ticket source.
 $ticket = null;

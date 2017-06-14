@@ -1,6 +1,6 @@
 <?php
 // Tool
-$myVaccinesUtilities = new MyVaccinesUtilities();
+$iQeyUtilities = new IQeyUtilities();
 ?>
 <!-- Top bar section -->
 <?php
@@ -51,7 +51,7 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
                 <?php
                 $cpt = 0;
                 // Get the categories as array
-                $currentCategory = $myVaccinesUtilities->getCategoriesArray($categories);
+                $currentCategory = $iQeyUtilities->getCategoriesArray($categories);
 
                 // Loop over all categories
                 foreach ($currentCategory as $category) {

@@ -14,10 +14,10 @@
  * vim: expandtab sw=4 ts=4 sts=4:
  **********************************************************************/
 require('kb.inc.php');
-require_once(INCLUDE_DIR . 'MyVaccinesUtilities.php');
+require_once(INCLUDE_DIR . 'IQeyUtilities.php');
 
 // Tool
-$myVaccinesUtilities = new MyVaccinesUtilities();
+$iQeyUtilities = new IQeyUtilities();
 
 require_once(INCLUDE_DIR . 'class.category.php');
 require(CLIENTINC_DIR . 'header.custom.inc.php');

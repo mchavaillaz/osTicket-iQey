@@ -22,8 +22,8 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
                     $categorySanitized = Format::htmlchars($category->getLocalName());
 
                     // Get the category title from the sanitized string
-                    $categoryIcon = $myVaccinesUtilities->getCategoryIcon($categorySanitized);
-                    $categoryTitle = $myVaccinesUtilities->getCategoryTitle($categorySanitized);
+                    $categoryIcon = $iQeyUtilities->getCategoryIcon($categorySanitized);
+                    $categoryTitle = $iQeyUtilities->getCategoryTitle($categorySanitized);
 
                     // Display the category title
                     echo $categoryTitle;
