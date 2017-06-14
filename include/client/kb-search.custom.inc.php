@@ -20,7 +20,7 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
                 echo '<div>'
                     . sprintf(
                         __('%d FAQs matched your search criteria.'),
-                        count($faqsForContext))
+                        count($faqs))
                     . '<ol>';
                 foreach ($faqs as $F) {
                     echo sprintf(
