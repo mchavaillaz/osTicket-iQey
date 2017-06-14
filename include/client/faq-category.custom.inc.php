@@ -21,7 +21,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
                     // Get the full category name after sanitize
                     $categorySanitized = Format::htmlchars($category->getLocalName());
 
-                    // Get the context and the category title from the sanitized string
+                    // Get the category title from the sanitized string
                     $categoryIcon = $myVaccinesUtilities->getCategoryIcon($categorySanitized);
                     $categoryTitle = $myVaccinesUtilities->getCategoryTitle($categorySanitized);
 
