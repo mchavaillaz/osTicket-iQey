@@ -36,10 +36,16 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
 	<table class="table-center">
 		<tr>
             <?php
-            // Build the urls according to the page context
+            // Tools
             $faqUrl = 'kb/index.php';
             $newTicketUrl = 'open.php';
+            $iQeySetUpUrl = 'iqey-setup/index.php'
             ?>
+			<td style="padding-bottom: 15px;">
+				<a href="<?php echo $iQeySetUpUrl; ?>">
+					<img src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
+				</a>
+			</td>
 			<td style="padding-bottom: 15px;">
 				<a href="<?php echo $faqUrl; ?>">
 					<img src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
@@ -55,6 +61,11 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
             <?php if ($BUTTONS) { ?>
                 <?php
                 if ($cfg->getClientRegistrationMode() != 'disabled' || !$cfg->isClientLoginRequired()) { ?>
+					<td>
+						<a href="<?php echo $iQeySetUpUrl ?>" class="button-secondary button-big">
+                            <?php echo __('iQey Setup/Downloads'); ?>
+						</a>
+					</td>
 					<td>
 						<a href="<?php echo $faqUrl ?>" class="button-secondary button-big">
                             <?php echo __('FAQ'); ?>

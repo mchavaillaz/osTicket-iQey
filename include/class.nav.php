@@ -309,8 +309,8 @@ class UserNav {
     }
 
     function setActiveNav($nav){
-
-        if($nav && $this->navs[$nav]){
+        if($nav && $this->navs[$nav]) {
+            error_log("coucou " . $nav);
             $this->navs[$nav]['active']=true;
             if($this->activenav && $this->activenav!=$nav && $this->navs[$this->activenav])
                  $this->navs[$this->activenav]['active']=false;
@@ -332,6 +332,7 @@ class UserNav {
             $navs = array();
             $user = $this->user;
             $navs['home']=array('desc'=>__('Support Center Home'),'href'=>'index.php','title'=>'');
+            $navs['iqey-setup']=array('desc'=>__('iQey Setup/Downloads'),'href'=>'iqey-setup/index.php','title'=>__('iQey Setup/Downloads'));
             if($cfg && $cfg->isKnowledgebaseEnabled())
                 $navs['kb']=array('desc'=>__('FAQ'),'href'=>'kb/index.php','title'=>'');
 
