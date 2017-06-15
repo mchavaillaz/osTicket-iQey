@@ -35,12 +35,14 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 <!-- Setup section -->
 <div class="wrapper">
 	<div class="container">
+		<h1>Setup title</h1>
 		Setup section
 	</div>
 </div>
 <!-- Download section -->
 <div class="wrapper">
 	<div class="container">
+		<h1>Download title</h1>
 		Download section
 	</div>
 </div>
