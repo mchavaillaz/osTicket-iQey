@@ -43,7 +43,7 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
             ?>
 			<td style="padding-bottom: 15px;">
 				<a href="<?php echo $iQeySetUpUrl; ?>">
-					<img src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
+					<img src="<?php echo ASSETS_PATH; ?>images/icons/iqey_setup.png">
 				</a>
 			</td>
 			<td style="padding-bottom: 15px;">
