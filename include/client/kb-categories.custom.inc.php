@@ -69,17 +69,11 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
 					<td class="faq-table-td">
 						<img src="<?php echo ASSETS_PATH; ?>images/icons/<?php echo $categoryIcon . '.png' ?>">
 					</td>
-					<td>
-                            <span class="faq-category-title">
-								<?php
-                                echo $categoryTitle . ' [' . $categoryTopicAmount . ']';
-                                ?>
-                            </span>
-						<br>
-						<br>
-						<a href="faq.php?cid=<?php echo $categoryId ?>"
-						   class="button-secondary button-small">
-                            <?php echo __('Enter'); ?>
+					<td class="faq-category-title">
+						<a href="faq.php?cid=<?php echo $categoryId ?>">
+						<?php
+							echo $categoryTitle . ' [' . $categoryTopicAmount . ']';
+						?>
 						</a>
 					</td>
                     <?php
