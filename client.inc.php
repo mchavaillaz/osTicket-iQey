@@ -25,7 +25,6 @@ if(!defined('INCLUDE_DIR')) die('Fatal error');
 /*Some more include defines specific to client only */
 define('CLIENTINC_DIR',INCLUDE_DIR.'client/');
 define('OSTCLIENTINC',TRUE);
-
 define('ASSETS_PATH',ROOT_PATH.'assets/default/');
 
 //Check the status of the HelpDesk.
@@ -39,6 +38,10 @@ if (!in_array(strtolower(basename($_SERVER['SCRIPT_NAME'])), array('logo.php','f
 require_once(INCLUDE_DIR.'class.client.php');
 require_once(INCLUDE_DIR.'class.ticket.php');
 require_once(INCLUDE_DIR.'class.dept.php');
+require_once(INCLUDE_DIR . 'PropertyService.php');
+
+// Tool
+$propertyService = new PropertyService(CONFIG_DIR);
 
 //clear some vars
 $errors=array();

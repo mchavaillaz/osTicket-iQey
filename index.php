@@ -45,14 +45,17 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
             // Tools
             $faqUrl = 'kb/index.php';
             $newTicketUrl = 'open.php';
-            $iQeySetUpUrl = 'iqey-setup/index.php'
-            ?>
-<!--			<td style="padding-bottom: 15px;">-->
-<!--				<a href="--><?php //echo $iQeySetUpUrl; ?><!--">-->
-<!--					<img src="--><?php //echo ASSETS_PATH; ?><!--images/icons/iqey_setup.png">-->
-<!--				</a>-->
-<!--			</td>-->
-            <?php
+            $iQeySetUpUrl = 'iqey-setup/index.php';
+
+            if ($propertyService->isIQeySetupDownloadPageEnable()) {
+                ?>
+				<td style="padding-bottom: 15px;">
+					<a href="<?php echo $iQeySetUpUrl; ?>">
+						<img src="<?php echo ASSETS_PATH; ?>images/icons/iqey_setup.png">
+					</a>
+				</td>
+                <?php
+            }
             if ($cfg->isKnowledgebaseEnabled()) {
                 ?>
 				<td style="padding-bottom: 15px;">
@@ -72,13 +75,16 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
 		<tr>
             <?php if ($BUTTONS) { ?>
                 <?php
-                if ($cfg->getClientRegistrationMode() != 'disabled' || !$cfg->isClientLoginRequired()) { ?>
-<!--					<td>-->
-<!--						<a href="--><?php //echo $iQeySetUpUrl ?><!--" class="button-secondary button-big">-->
-<!--                            --><?php //echo __('iQey Setup/Downloads'); ?>
-<!--						</a>-->
-<!--					</td>-->
-                    <?php
+                if ($cfg->getClientRegistrationMode() != 'disabled' || !$cfg->isClientLoginRequired()) {
+                    if ($propertyService->isIQeySetupDownloadPageEnable()) {
+                        ?>
+						<td>
+							<a href="<?php echo $iQeySetUpUrl ?>" class="button-secondary button-big">
+                                <?php echo __('iQey Setup/Downloads'); ?>
+							</a>
+						</td>
+                        <?php
+                    }
                     if ($cfg->isKnowledgebaseEnabled()) {
                         ?>
 						<td>

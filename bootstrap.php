@@ -306,6 +306,7 @@ unset($here); unset($h);
 define('INCLUDE_DIR',ROOT_DIR.'include/'); //Change this if include is moved outside the web path.
 define('PEAR_DIR',INCLUDE_DIR.'pear/');
 define('SETUP_DIR',ROOT_DIR.'setup/');
+define('CONFIG_DIR', ROOT_DIR . 'config/');
 
 define('UPGRADE_DIR', INCLUDE_DIR.'upgrader/');
 define('I18N_DIR', INCLUDE_DIR.'i18n/');
