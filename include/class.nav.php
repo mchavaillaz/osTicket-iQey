@@ -332,7 +332,7 @@ class UserNav {
             $navs = array();
             $user = $this->user;
             $navs['home']=array('desc'=>__('Support Center Home'),'href'=>'index.php','title'=>'');
-            $navs['iqey-setup']=array('desc'=>__('iQey Setup/Downloads'),'href'=>'iqey-setup/index.php','title'=>__('iQey Setup/Downloads'));
+//            $navs['iqey-setup']=array('desc'=>__('iQey Setup/Downloads'),'href'=>'iqey-setup/index.php','title'=>__('iQey Setup/Downloads'));
             if($cfg && $cfg->isKnowledgebaseEnabled())
                 $navs['kb']=array('desc'=>__('FAQ'),'href'=>'kb/index.php','title'=>'');
 

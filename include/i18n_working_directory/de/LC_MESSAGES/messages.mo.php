@@ -1054,6 +1054,7 @@ Thank you for choosing osTicket!' => 'Herzlichen Glückwunsch! Die osTicket-Grun
     'IP' => 'IP-Adresse',
     'IP Address' => 'IP-Adresse',
     'IP address of remote user, for web submissions' => 'IP-Adresse des Benutzers, bei Webübermittlungen',
+    'iQey Setup/Downloads' => 'Anleitungen/Downloads',
     'If sample config file is missing - please make sure you uploaded all files in \'upload\' folder or refer to the %1$s Installation Guide %2$s' => 'Wenn die Beispiel-Konfigurationsdatei fehlt, stellen Sie bitte sicher, dass Sie alle Dateien aus dem Verzeichnis \'upload\' auf den Server kopiert haben oder sehen Sie in die %1$s Installationsanleitung %2$s',
     'If this is your first time contacting us or you\'ve lost the ticket number, please %s open a new ticket %s' => 'Wenn dies der erste Kontakt ist oder Sie Ihre Anfragenummer verloren haben, %s erstellen Sie bitte eine neue Anfrage %s',
     'If you are looking for a greater level of support, we provide <u>professional installation services</u> and commercial support with guaranteed response times, and access to the core development team. We can also help customize osTicket or even add new features to the system to meet your unique needs.' => 'Wenn Sie auf der Suche nach besserem Support sind, bieten wir Ihnen <u>professionelle Installationsdienste</u> und kommerziellen Support mit garantierten Reaktionszeiten und Zugang zum Kern-Entwickler-Team an. Wir können Ihnen auch helfen, osTicket anzupassen oder neue Funktionen hinzufügen, die Ihren besonderen Anforderungen entsprechen.',
