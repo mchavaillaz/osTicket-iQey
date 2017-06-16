@@ -22,7 +22,13 @@ require(CLIENTINC_DIR . 'header.custom.inc.php');
 <!-- Top bar section -->
 <?php
 $title = __('Welcome to the Support Center');
-$text = __('We put together frequently asked questions (FAQ).<br>If you cannot find an answer to your question, feel free to create a new request.<br><br>Your iQey support team');
+
+if ($cfg->isKnowledgebaseEnabled()) {
+    $text = __('We put together frequently asked questions (FAQ).<br>If you cannot find an answer to your question, feel free to create a new request.<br><br>Your iQey support team');
+} else {
+    $text = __('Feel free to create a new request.<br><br>Your iQey support team');
+}
+
 require(CLIENTINC_DIR . 'page-header.inc.php');
 ?>
 <!-- Search in FAQ form -->
@@ -41,16 +47,22 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
             $newTicketUrl = 'open.php';
             $iQeySetUpUrl = 'iqey-setup/index.php'
             ?>
-			<td style="padding-bottom: 15px;">
-				<a href="<?php echo $iQeySetUpUrl; ?>">
-					<img src="<?php echo ASSETS_PATH; ?>images/icons/iqey_setup.png">
-				</a>
-			</td>
-			<td style="padding-bottom: 15px;">
-				<a href="<?php echo $faqUrl; ?>">
-					<img src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
-				</a>
-			</td>
+<!--			<td style="padding-bottom: 15px;">-->
+<!--				<a href="--><?php //echo $iQeySetUpUrl; ?><!--">-->
+<!--					<img src="--><?php //echo ASSETS_PATH; ?><!--images/icons/iqey_setup.png">-->
+<!--				</a>-->
+<!--			</td>-->
+            <?php
+            if ($cfg->isKnowledgebaseEnabled()) {
+                ?>
+				<td style="padding-bottom: 15px;">
+					<a href="<?php echo $faqUrl; ?>">
+						<img src="<?php echo ASSETS_PATH; ?>images/icons/faq_blue.png">
+					</a>
+				</td>
+                <?php
+            }
+            ?>
 			<td style="padding-bottom: 15px;">
 				<a href="<?php echo $newTicketUrl; ?>">
 					<img src="<?php echo ASSETS_PATH; ?>images/icons/new_ticket.png">
@@ -61,16 +73,22 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
             <?php if ($BUTTONS) { ?>
                 <?php
                 if ($cfg->getClientRegistrationMode() != 'disabled' || !$cfg->isClientLoginRequired()) { ?>
-					<td>
-						<a href="<?php echo $iQeySetUpUrl ?>" class="button-secondary button-big">
-                            <?php echo __('iQey Setup/Downloads'); ?>
-						</a>
-					</td>
-					<td>
-						<a href="<?php echo $faqUrl ?>" class="button-secondary button-big">
-                            <?php echo __('FAQ'); ?>
-						</a>
-					</td>
+<!--					<td>-->
+<!--						<a href="--><?php //echo $iQeySetUpUrl ?><!--" class="button-secondary button-big">-->
+<!--                            --><?php //echo __('iQey Setup/Downloads'); ?>
+<!--						</a>-->
+<!--					</td>-->
+                    <?php
+                    if ($cfg->isKnowledgebaseEnabled()) {
+                        ?>
+						<td>
+							<a href="<?php echo $faqUrl ?>" class="button-secondary button-big">
+                                <?php echo __('FAQ'); ?>
+							</a>
+						</td>
+                        <?php
+                    }
+                    ?>
 					<td>
 						<a href="<?php echo $newTicketUrl; ?>" class="button-secondary button-big">
                             <?php echo __('Create new request'); ?>
