@@ -40,7 +40,7 @@ require_once(INCLUDE_DIR.'class.ticket.php');
 require_once(INCLUDE_DIR.'class.dept.php');
 require_once(INCLUDE_DIR . 'PropertyService.php');
 
-// Tool
+// Global tool
 $propertyService = new PropertyService(CONFIG_DIR);
 
 //clear some vars

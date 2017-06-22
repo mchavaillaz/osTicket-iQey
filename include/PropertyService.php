@@ -34,4 +34,59 @@ class PropertyService
     {
         return filter_var($this->propertiesArray['isIqeySetupDownloadPageEnable'], FILTER_VALIDATE_BOOLEAN);
     }
+
+    /**
+     * Get the property "isMacDownloadEnable".
+     *
+     * @return boolean the value of the property isMacDownloadEnable
+     */
+    function isMacDownloadEnable()
+    {
+        return filter_var($this->propertiesArray['isMacDownloadEnable'], FILTER_VALIDATE_BOOLEAN);
+    }
+
+    /**
+     * Get the property "isWindowsDownloadEnable".
+     *
+     * @return boolean the value of the property isWindowsDownloadEnable
+     */
+    function isWindowsDownloadEnable()
+    {
+        return filter_var($this->propertiesArray['isWindowsDownloadEnable'], FILTER_VALIDATE_BOOLEAN);
+    }
+
+    /**
+     * Get the property "macDownloadUrl".
+     *
+     * @return string the value of the property macDownloadUrl
+     */
+    function getMacDownloadUrl($language)
+    {
+        $key = 'macDownloadUrl' . strtoupper($language);
+        return filter_var($this->propertiesArray[$key]);
+    }
+
+    /**
+     * Get the property "windowsDownloadUrl" for the given language.
+     *
+     * @param $language string the current language
+     * @return string the value of the property windowsDownloadUrl
+     */
+    function getWindowsDownloadUrl($language)
+    {
+        $key = 'windowsDownloadUrl' . strtoupper($language);
+        return filter_var($this->propertiesArray[$key]);
+    }
+
+    /**
+     * Get the property "iQeySetupManualUrl" Url in the given language.
+     *
+     * @param $language string the current language
+     * @return string the value of the property iQeySetupManualUrl for the given language
+     */
+    function getIQeySetupManualUrl($language)
+    {
+        $key = 'iQeySetupManualUrl' . strtoupper($language);
+        return filter_var($this->propertiesArray[$key]);
+    }
 }

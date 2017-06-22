@@ -32,6 +32,7 @@ if ($lang) {
 
 		<title>Support iQey</title>
 
+		<link type="text/css" rel="stylesheet" href="<?php echo ASSETS_PATH; ?>css/flexboxgrid.min.css">
 		<link type="text/css" rel="stylesheet" href="<?php echo ASSETS_PATH; ?>css/iqey.css">
 
 		<script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/jquery-1.11.2.min.js"></script>
