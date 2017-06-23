@@ -85,7 +85,6 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
             <?php
             echo sprintf(__('iQey-Setup installation manual'), $propertyService->getIQeySetupManualUrl(Internationalization::getCurrentLanguage()));
             ?>
-			.
 		</div>
 	</div>
 </div>
