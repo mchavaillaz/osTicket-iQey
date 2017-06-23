@@ -43,11 +43,23 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 				<img src="<?php echo ASSETS_PATH; ?>images/os_windows.png" style="width: 110px;">
 				<br>
 				<br>
-				<a href="<?php echo $propertyService->getWindowsDownloadUrl(Internationalization::getCurrentLanguage()) ?>"
-				   class="button-secondary button-small"
-				   target="_blank">
-                    <?php echo __('Download'); ?>
-				</a>
+                <?php
+                if ($propertyService->isWindowsDownloadEnable()) {
+                    ?>
+					<a href="<?php echo $propertyService->getWindowsDownloadUrl(Internationalization::getCurrentLanguage()) ?>"
+					   class="button-secondary button-small"
+					   target="_blank">
+                        <?php echo __('Download'); ?>
+					</a>
+                    <?php
+                } else {
+                    ?>
+					<span class="button-secondary disabled button-small">
+						<?php echo __('iQey download no available'); ?>
+					</span>
+                    <?php
+                }
+                ?>
 			</div>
 			<div class="flex-item-iqey-download">
 				<img src="<?php echo ASSETS_PATH; ?>images/os_mac.jpg" style="width: 97px;">
