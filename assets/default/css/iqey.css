@@ -293,7 +293,7 @@ a.button.but-enter {
 	text-decoration: underline;
 }
 
-.faq-category-title a:link, a:visited {
+.faq-category-title a:link, .faq-category-title a:visited {
 	color: #0F2346;
 }
 
