@@ -22,16 +22,7 @@ require(CLIENTINC_DIR . 'header.custom.inc.php');
 <!-- Top bar section -->
 <?php
 $title = __('Welcome to the Support Center');
-
 $text = __('Ticket enable');
-
-
-//if ($cfg->isKnowledgebaseEnabled()) {
-//    $text = __('We put together frequently asked questions (FAQ).<br>If you cannot find an answer to your question, feel free to create a new request.<br><br>Your iQey support team');
-//} else {
-//    $text = __('Feel free to create a new request.<br><br>Your iQey support team');
-//}
-
 require(CLIENTINC_DIR . 'page-header.inc.php');
 ?>
 <!-- Search in FAQ form -->
