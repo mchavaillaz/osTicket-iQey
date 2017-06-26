@@ -54,7 +54,7 @@ a:visited {
 	border: 1px solid #aaa;
 }
 
-.button-primary:link, .button-primary:visited {
+.button-primary, .button-primary:link, .button-primary:visited {
 	font-size: 18px;
 	color: #ffffff;
 	border: none;
@@ -303,10 +303,11 @@ a.button.but-enter {
 	font-size: 16px;
 }
 
-.faq-search-result {
+.faq-search-result a:link, .faq-search-result a:visited {
 	padding-left: 10px;
 	line-height: 25px;
 	font-size: 16px;
+	color: #0F2346;
 }
 
 .faq-search-result a:hover {

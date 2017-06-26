@@ -8,7 +8,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 <?php
 include CLIENTINC_DIR . 'search-in-faq.inc.php';
 ?>
-<div class="separator"></div>
+<div class="separator">
 <div class="wrapper">
 	<div class="container">
 		<div class="column center">
@@ -24,7 +24,7 @@ include CLIENTINC_DIR . 'search-in-faq.inc.php';
                     . '<ol>';
                 foreach ($faqs as $F) {
                     echo sprintf(
-                        '<li class="faq-search-result"><a href="faq.php?id=%d" class="previewfaq">%s</a></li>',
+                        '<li class="faq-search-result"><a href="faq.php?id=%d">%s</a></li>',
                         $F->getId(),
                         $F->getLocalQuestion(),
                         $F->getVisibilityDescription());

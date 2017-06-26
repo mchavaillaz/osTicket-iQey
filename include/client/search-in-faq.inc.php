@@ -10,7 +10,9 @@
 							<input type="text" name="q" class="faq-search-field" placeholder="<?php echo __('Search in the FAQ'); ?>"/>
 						</td>
 						<td>
-							<button type="submit" class="button-primary button-big"><?php echo __('Search'); ?></button>
+							<button type="submit" class="button-primary button-big">
+								<?php echo __('Search'); ?>
+							</button>
 						</td>
 					</tr>
 				</table>
