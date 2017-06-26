@@ -95,6 +95,14 @@ The ticket system is able to fetch email automatically and create new ticket or 
 
 This feature required a cron job on the server side. All config details are available [here](http://osticket.com/wiki/POP3/IMAP_Setting_Guide).
 
+# FAQ with dynamic icons
+
+You can use a specific icon dynamically in the FAQ admin page for a FAQ category using the following syntax: 
+
+`ICONXXX!!My Category` where XXX is the number of the icon to use.
+
+At the moment only one icon is available the "ICON1"
+
 # Help
 
 Visit the [wiki](http://osticket.com/wiki/Home) or the [forum](http://osticket.com/forums/) of osTicket.
