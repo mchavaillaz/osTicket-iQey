@@ -28,13 +28,17 @@ You can now access osTicket-iQey and follow the installation steps at the url:
    
 	http://localhost/osTicket-iQey/setup/
 
-# Upgrade from the version 1.0.1 to the 1.0.2
+A config file is also available under `/config/config.ini`. In this file you can enable/disable certain pages and specify URLs to documents.
 
-1. Backup the file `/include/ost-config.php` of the version 1.0.1
-2. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
-3. Extract the content in your webserver
-4. Copy the backup file (point 1) into the new version 1.0.2 under `/include/ost-config.php`
-5. Set the correct urls/properties for the iQey in the new file `/config/config.ini`
+# Upgrade from the version 1.0.2 to the 1.0.3
+
+1. Backup the file `/include/ost-config.php` of the version 1.0.2
+2. Backup the file `/config/config.ini` of the version 1.0.2
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
+4. Extract the content in your webserver
+5. Copy the backup file (point 1) into the new version 1.0.3 under `/include/ost-config.php`
+6. Copy the backup file (point 2) into the new version 1.0.3 under `/config/config.ini`
+7. Set the correct urls/properties for the iQey in the new file `/config/config.ini` (when needed)
 
 # Release new version
 
