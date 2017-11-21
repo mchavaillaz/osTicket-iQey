@@ -311,7 +311,10 @@ class UserNav {
     }
 
     function setActiveNav($nav){
-        if($nav && $this->navs[$nav]) {
+        // Deactivate the current active navbar
+        if($nav == 'none') {
+            $this->navs[$this->activenav]['active']=false;
+        } elseif($nav && $this->navs[$nav]) {
             $this->navs[$nav]['active']=true;
             if($this->activenav && $this->activenav!=$nav && $this->navs[$this->activenav])
                  $this->navs[$this->activenav]['active']=false;

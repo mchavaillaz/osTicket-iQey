@@ -9,8 +9,8 @@
 
 require_once('../client.inc.php');
 
-// Set the active navbar to iqey-setup
-$nav->setActiveNav('iqey-setup');
+// Disable the current active navbar because this page is not public (no option in the navbar should be active)
+$nav->setActiveNav('none');
 
 require(CLIENTINC_DIR . 'header.custom.inc.php');
 require(CLIENTINC_DIR . 'footer.custom.inc.php');
