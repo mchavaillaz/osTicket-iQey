@@ -515,7 +515,10 @@ a.button.but-enter {
 
 .wrapper.bg {
 	background: #133157 url('../images/img_bg_frame.jpg') no-repeat top right;
+}
 
+.wrapper.bg-aek {
+	background: #133157 url('../images/aek_logo.jpg') no-repeat top right;
 }
 
 .iqey-setup-manual a:link, a:visited {

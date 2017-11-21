@@ -1,5 +1,7 @@
 <?php
 
+require(INCLUDE_DIR . 'ConfigSectionEnum.php');
+
 class PropertyService
 {
     /**
@@ -22,7 +24,8 @@ class PropertyService
      */
     function __construct($configDir)
     {
-        $this->propertiesArray = parse_ini_file($configDir . $this::APPLICATION_INI_FILE);
+        $parseSection = true;
+        $this->propertiesArray = parse_ini_file($configDir . $this::APPLICATION_INI_FILE, $parseSection);
     }
 
     /**
@@ -32,50 +35,55 @@ class PropertyService
      */
     function isIQeySetupDownloadPageEnable()
     {
-        return filter_var($this->propertiesArray['isIqeySetupDownloadPageEnable'], FILTER_VALIDATE_BOOLEAN);
+        return filter_var($this->propertiesArray[ConfigSectionEnum::IQEY_SETUP]['isIqeySetupDownloadPageEnable'], FILTER_VALIDATE_BOOLEAN);
     }
 
     /**
-     * Get the property "isMacDownloadEnable".
+     * Get the property "isMacDownloadEnable" for the given $sectionName.
      *
-     * @return boolean the value of the property isMacDownloadEnable
+     * @param $sectionName string the section name
+     * @return boolean the value of the property isMacDownloadEnable for the given $sectionName
      */
-    function isMacDownloadEnable()
+    function isMacDownloadEnable($sectionName)
     {
-        return filter_var($this->propertiesArray['isMacDownloadEnable'], FILTER_VALIDATE_BOOLEAN);
+        return filter_var($this->propertiesArray[$sectionName]['isMacDownloadEnable'], FILTER_VALIDATE_BOOLEAN);
     }
 
     /**
-     * Get the property "isWindowsDownloadEnable".
+     * Get the property "isWindowsDownloadEnable" for the given $sectionName.
      *
-     * @return boolean the value of the property isWindowsDownloadEnable
+     * @param $sectionName string the section name
+     * @return boolean the value of the property isWindowsDownloadEnable for the given $sectionName
      */
-    function isWindowsDownloadEnable()
+    function isWindowsDownloadEnable($sectionName)
     {
-        return filter_var($this->propertiesArray['isWindowsDownloadEnable'], FILTER_VALIDATE_BOOLEAN);
+        return filter_var($this->propertiesArray[$sectionName]['isWindowsDownloadEnable'], FILTER_VALIDATE_BOOLEAN);
     }
 
     /**
-     * Get the property "macDownloadUrl".
+     * Get the property "macDownloadUrl" for the given language for the given $sectionName.
      *
-     * @return string the value of the property macDownloadUrl
+     * @param $sectionName string the section name
+     * @param $language string the current language
+     * @return string the value of the property macDownloadUrl for the given $sectionName
      */
-    function getMacDownloadUrl($language)
+    function getMacDownloadUrl($sectionName, $language)
     {
         $key = 'macDownloadUrl' . strtoupper($language);
-        return filter_var($this->propertiesArray[$key]);
+        return filter_var($this->propertiesArray[$sectionName][$key]);
     }
 
     /**
-     * Get the property "windowsDownloadUrl" for the given language.
+     * Get the property "windowsDownloadUrl" for the given language for the given $sectionName.
      *
+     * @param $sectionName string the section name
      * @param $language string the current language
-     * @return string the value of the property windowsDownloadUrl
+     * @return string the value of the property windowsDownloadUrl for the given $sectionName
      */
-    function getWindowsDownloadUrl($language)
+    function getWindowsDownloadUrl($sectionName, $language)
     {
         $key = 'windowsDownloadUrl' . strtoupper($language);
-        return filter_var($this->propertiesArray[$key]);
+        return filter_var($this->propertiesArray[$sectionName][$key]);
     }
 
     /**
@@ -87,6 +95,6 @@ class PropertyService
     function getIQeySetupManualUrl($language)
     {
         $key = 'iQeySetupManualUrl' . strtoupper($language);
-        return filter_var($this->propertiesArray[$key]);
+        return filter_var($this->propertiesArray[ConfigSectionEnum::IQEY_SETUP][$key]);
     }
 }

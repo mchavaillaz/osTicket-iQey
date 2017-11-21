@@ -17,9 +17,9 @@ require(CLIENTINC_DIR . 'footer.custom.inc.php');
 ?>
 <!-- Top bar section -->
 <?php
-$title = __('iQey Setup');
-$text = __('This page contains the setup steps for the iQey');
-require(CLIENTINC_DIR . 'page-header.inc.php');
+$title = __('CDM Smart Card Reader Setup');
+$text = __('You can find here the installation files for your Smart Card Reader driver.');
+require(CLIENTINC_DIR . 'page-header-aek.inc.php');
 ?>
 <!-- Icon section -->
 <div class="wrapper">
@@ -36,7 +36,7 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 <div class="wrapper">
 	<div class="container center">
 		<h1>
-            <?php echo __('iQey download package') ?>
+            <?php echo __('Download the installation files "CDM Smart Card Reader with iQey" for') ?>
 		</h1>
 		<div class="flex-container-iqey-setup">
 			<div class="flex-item-iqey-download">
@@ -44,9 +44,9 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 				<br>
 				<br>
                 <?php
-                if ($propertyService->isWindowsDownloadEnable(ConfigSectionEnum::IQEY_SETUP)) {
+                if ($propertyService->isWindowsDownloadEnable(ConfigSectionEnum::AEK_SETUP)) {
                     ?>
-					<a href="<?php echo $propertyService->getWindowsDownloadUrl(ConfigSectionEnum::IQEY_SETUP, Internationalization::getCurrentLanguage()) ?>"
+					<a href="<?php echo $propertyService->getWindowsDownloadUrl(ConfigSectionEnum::AEK_SETUP, Internationalization::getCurrentLanguage()) ?>"
 					   class="button-secondary button-small"
 					   target="_blank">
                         <?php echo __('Download'); ?>
@@ -66,9 +66,9 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 				<br>
 				<br>
                 <?php
-                if ($propertyService->isMacDownloadEnable(ConfigSectionEnum::IQEY_SETUP)) {
+                if ($propertyService->isMacDownloadEnable(ConfigSectionEnum::AEK_SETUP)) {
                     ?>
-					<a href="<?php echo $propertyService->getMacDownloadUrl(ConfigSectionEnum::IQEY_SETUP, Internationalization::getCurrentLanguage()) ?>"
+					<a href="<?php echo $propertyService->getMacDownloadUrl(ConfigSectionEnum::AEK_SETUP, Internationalization::getCurrentLanguage()) ?>"
 					   class="button-secondary button-small"
 					   target="_blank">
                         <?php echo __('Download'); ?>
@@ -90,12 +90,9 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
 <!-- Setup section -->
 <div class="wrapper">
 	<div class="container center">
-		<h1>
-            <?php echo __('iQey-Setup'); ?>
-		</h1>
 		<div class="iqey-setup-manual">
             <?php
-            echo sprintf(__('iQey-Setup installation manual'), $propertyService->getIQeySetupManualUrl(Internationalization::getCurrentLanguage()));
+            echo __('This software is available for the Caisse des Médecins members.<br> He is compatible with the readers supported by the Caisse des médecins');
             ?>
 		</div>
 	</div>
