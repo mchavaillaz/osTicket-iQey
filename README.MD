@@ -40,6 +40,16 @@ A config file is also available under `/config/config.ini`. In this file you can
 6. Copy the backup file (point 2) into the new version 1.0.3 under `/config/config.ini`
 7. Set the correct urls/properties for the iQey in the new file `/config/config.ini` (when needed)
 
+# Upgrade from the version 1.0.3 to the 1.0.4
+
+1. Backup the file `/include/ost-config.php` of the version 1.0.3
+2. Backup the file `/config/config.ini` of the version 1.0.3
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
+4. Extract the content in your webserver
+5. Copy the backup file (point 1) into the new installed version 1.0.4 under `/include/ost-config.php` (override the current ost-config.php)
+6. Open the config.ini 1.0.3 and copy the section [iqey-setup] into the new `/config/config.ini` 1.0.4
+7. Set the correct values to the properties in the section [aek-setup] 
+
 # Release new version
 
 Create a new release with Github.<br>
