@@ -518,7 +518,7 @@ a.button.but-enter {
 }
 
 .wrapper.bg-aek {
-	background: #133157;
+	background: #133157 url('../images/aek_logo.png') no-repeat 85%;
 }
 
 .iqey-setup-manual a:link, a:visited {
