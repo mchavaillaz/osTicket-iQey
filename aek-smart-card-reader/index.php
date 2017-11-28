@@ -90,11 +90,16 @@ require(CLIENTINC_DIR . 'page-header-aek.inc.php');
 <!-- Setup section -->
 <div class="wrapper">
 	<div class="container center">
-		<div class="iqey-setup-manual">
+		<?php
+		echo __('This software is available for the Caisse des Médecins members.<br> He is compatible with the readers supported by the Caisse des médecins');
+		?>
+		<br>
+		<br>
+		<p style="font-style: italic;">
             <?php
-            echo __('This software is available for the Caisse des Médecins members.<br> He is compatible with the readers supported by the Caisse des médecins');
+            echo __('Supported platform: Windows 7, 8 and 10, macOS 10.12 (Sierra) and higher');
             ?>
-		</div>
+		</p>
 	</div>
 </div>
 <br>
