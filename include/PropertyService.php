@@ -61,6 +61,17 @@ class PropertyService
     }
 
     /**
+     * Get the property "isWindows64DownloadEnable" for the given $sectionName.
+     *
+     * @param $sectionName string the section name
+     * @return boolean the value of the property isWindows64DownloadEnable for the given $sectionName
+     */
+    function isWindows64DownloadEnable($sectionName)
+    {
+        return filter_var($this->propertiesArray[$sectionName]['isWindows64DownloadEnable'], FILTER_VALIDATE_BOOLEAN);
+    }
+
+    /**
      * Get the property "macDownloadUrl" for the given language for the given $sectionName.
      *
      * @param $sectionName string the section name
@@ -83,6 +94,19 @@ class PropertyService
     function getWindowsDownloadUrl($sectionName, $language)
     {
         $key = 'windowsDownloadUrl' . strtoupper($language);
+        return filter_var($this->propertiesArray[$sectionName][$key]);
+    }
+
+    /**
+     * Get the property "windows64DownloadUrl" for the given language for the given $sectionName.
+     *
+     * @param $sectionName string the section name
+     * @param $language string the current language
+     * @return string the value of the property windows64DownloadUrl for the given $sectionName
+     */
+    function getWindows64DownloadUrl($sectionName, $language)
+    {
+        $key = 'windows64DownloadUrl' . strtoupper($language);
         return filter_var($this->propertiesArray[$sectionName][$key]);
     }
 

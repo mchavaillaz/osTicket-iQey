@@ -38,6 +38,8 @@ require(CLIENTINC_DIR . 'page-header-aek.inc.php');
 		<h1>
             <?php echo __('Download the installation files "CDM Smart Card Reader with iQey" for') ?>
 		</h1>
+
+		<!-- Windows 86 download logic -->
 		<div class="flex-container-iqey-setup">
 			<div class="flex-item-iqey-download">
 				<img src="<?php echo ASSETS_PATH; ?>images/os_windows.png" style="width: 110px;">
@@ -46,21 +48,47 @@ require(CLIENTINC_DIR . 'page-header-aek.inc.php');
                 <?php
                 if ($propertyService->isWindowsDownloadEnable(ConfigSectionEnum::AEK_SETUP)) {
                     ?>
-					<a href="<?php echo $propertyService->getWindowsDownloadUrl(ConfigSectionEnum::AEK_SETUP, Internationalization::getCurrentLanguage()) ?>"
-					   class="button-secondary button-small"
-					   target="_blank">
-                        <?php echo __('Download'); ?>
-					</a>
-                    <?php
-                } else {
-                    ?>
-					<span class="button-secondary disabled button-small">
-						<?php echo __('iQey download no available'); ?>
+					<span style="padding-right: 3px;">
+						<a href="<?php echo $propertyService->getWindowsDownloadUrl(ConfigSectionEnum::AEK_SETUP, Internationalization::getCurrentLanguage()) ?>"
+						   class="button-secondary button-small"
+						   target="_blank">
+                        	x86
+						</a>
 					</span>
-                    <?php
-                }
+				<?php
+                } else { ?>
+					<span style="padding-right: 3px;">
+						<span class="button-secondary disabled button-small">
+							<?php echo __('iQey download no available'); ?>
+						</span>
+					</span>
+
+				<?php
+				} ?>
+
+				<!-- Windows 86_64 download logic -->
+                <?php
+                if ($propertyService->isWindows64DownloadEnable(ConfigSectionEnum::AEK_SETUP)) {
                 ?>
+				<span style="padding-right: 3px;">
+						<a href="<?php echo $propertyService->getWindows64DownloadUrl(ConfigSectionEnum::AEK_SETUP, Internationalization::getCurrentLanguage()) ?>"
+						   class="button-secondary button-small"
+						   target="_blank">
+                        	x86_64
+						</a>
+					</span>
+                <?php
+                } else { ?>
+					<span style="padding-left: 3px;">
+						<span class="button-secondary disabled button-small">
+							<?php echo __('iQey download no available'); ?>
+						</span>
+					</span>
+                <?php
+                } ?>
 			</div>
+
+			<!-- macOS download logic -->
 			<div class="flex-item-iqey-download">
 				<img src="<?php echo ASSETS_PATH; ?>images/os_mac.jpg" style="width: 97px;">
 				<br>
@@ -71,7 +99,7 @@ require(CLIENTINC_DIR . 'page-header-aek.inc.php');
 					<a href="<?php echo $propertyService->getMacDownloadUrl(ConfigSectionEnum::AEK_SETUP, Internationalization::getCurrentLanguage()) ?>"
 					   class="button-secondary button-small"
 					   target="_blank">
-                        <?php echo __('Download'); ?>
+                        macOS
 					</a>
                     <?php
                 } else {
@@ -90,9 +118,9 @@ require(CLIENTINC_DIR . 'page-header-aek.inc.php');
 <!-- Setup section -->
 <div class="wrapper">
 	<div class="container center">
-		<?php
-		echo __('This software is available for the Caisse des Médecins members.<br> He is compatible with the readers supported by the Caisse des médecins');
-		?>
+        <?php
+        echo __('This software is available for the Caisse des Médecins members.<br> He is compatible with the readers supported by the Caisse des médecins');
+        ?>
 		<br>
 		<br>
 		<p style="font-style: italic;">
