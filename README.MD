@@ -59,6 +59,16 @@ A config file is also available under `/config/config.ini`. In this file you can
 5. Copy the backup file (point 1) into the new version 1.0.5 under `/include/ost-config.php`
 6. Copy the backup file (point 2) into the new version 1.0.5 under `/config/config.ini`
 
+# Upgrade from the version 1.0.5 to the 1.0.6
+
+1. Backup the file `/include/ost-config.php` of the version 1.0.5
+2. Backup the file `/config/config.ini` of the version 1.0.5
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
+4. Extract the content in your webserver
+5. Copy the backup file (point 1) into the new version 1.0.6 under `/include/ost-config.php`
+6. Copy/Paste the backup properties (point 2) into the new version 1.0.6 under `/config/config.ini`
+7. Set the correct urls to the windows x86_64 properties `windows64DownloadUrlXX`
+
 # Release new version
 
 Create a new release with Github.<br>
