@@ -2769,6 +2769,8 @@ verwendet werden, um Sequenzen für unterschiedliche Zwecke zu erzeugen.',
     'via %s' => 'über %s',
     'yesterday' => 'gestern',
     'you' => 'Sie',
+    'x86' => '32 Bit',
+    'x86_64' => '64 Bit',
     0 =>
         array(
             'Revision' => 0,

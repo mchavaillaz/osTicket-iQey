@@ -2769,6 +2769,8 @@ utilisées pour générer des séquences à des fins différentes.',
     'via %s' => 'par l\'intermédiaire de %s',
     'yesterday' => 'hier',
     'you' => 'vous',
+    'x86' => '32 bits',
+    'x86_64' => '64 bits',
     0 =>
         array(
             'Revision' => 0,

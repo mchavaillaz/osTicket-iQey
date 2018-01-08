@@ -52,7 +52,7 @@ require(CLIENTINC_DIR . 'page-header-aek.inc.php');
 						<a href="<?php echo $propertyService->getWindowsDownloadUrl(ConfigSectionEnum::AEK_SETUP, Internationalization::getCurrentLanguage()) ?>"
 						   class="button-secondary button-small"
 						   target="_blank">
-                        	x86
+                        	<?php echo __('x86'); ?>
 						</a>
 					</span>
 				<?php
@@ -74,7 +74,7 @@ require(CLIENTINC_DIR . 'page-header-aek.inc.php');
 						<a href="<?php echo $propertyService->getWindows64DownloadUrl(ConfigSectionEnum::AEK_SETUP, Internationalization::getCurrentLanguage()) ?>"
 						   class="button-secondary button-small"
 						   target="_blank">
-                        	x86_64
+                        	<?php echo __('x86_64'); ?>
 						</a>
 					</span>
                 <?php
