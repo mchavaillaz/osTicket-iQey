@@ -78,6 +78,15 @@ A config file is also available under `/config/config.ini`. In this file you can
 5. Copy the backup file (point 1) into the new version 1.0.7 under `/include/ost-config.php`
 6. Copy the backup file (point 2) into the new version 1.0.7 under `/config/config.php`
 
+# Upgrade from the version 1.0.7 to the 1.0.8
+
+1. Backup the file `/include/ost-config.php` of the version 1.0.7
+2. Backup the file `/config/config.ini` of the version 1.0.7
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
+4. Extract the content in your webserver
+5. Copy the backup file (point 1) into the new version 1.0.8 under `/include/ost-config.php`
+6. Copy the backup file (point 2) into the new version 1.0.8 under `/config/config.php`
+
 # Release new version
 
 Create a new release with Github.<br>
@@ -123,9 +132,19 @@ Other language .phar (php archive) are available <a href="osticket.com/download"
 
 ### How to build a .phar with my changes?
 
-Run the command `php /include/i18n_working_directory/build-phar.php`
+Go to the directory `/include/i18n_working_directory`
+Run the command `php build-phar.php`
 
 The configuration for the build is in  `/include/i18n_working_directory/build_phar_config.json`
+
+!! macOS High Sierra uses php7 but osTicket requires php56 !!
+
+Install and configure multiple php versions on macOS High Sierra --> https://getgrav.org/blog/macos-sierra-apache-multiple-php-versions
+
+Build the .phar using php56 like this:
+
+* Go to the directory `/include/i18n_working_directory`
+* Build the .phar `/usr/local/Cellar/php56/5.6.33_9/bin/php build-phar.php`
 
 ### How to use translated text in a page?
 

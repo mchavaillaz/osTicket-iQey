@@ -1,8 +1,8 @@
 {
-  "languages": [
-    "fr",
-    "de"
-  ],
-  "inputDir": "/",
-  "outputDir": "../i18n"
+	"languages": [
+		"fr",
+		"de"
+	],
+	"inputDir": "/",
+	"outputDir": "../i18n"
 }
