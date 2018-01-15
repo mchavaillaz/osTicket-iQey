@@ -34,7 +34,7 @@ A config file is also available under `/config/config.ini`. In this file you can
 
 1. Backup the file `/include/ost-config.php` of the version 1.0.2
 2. Backup the file `/config/config.ini` of the version 1.0.2
-3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest" target="_blank">latest version of osTicket-iQey</a>
 4. Extract the content in your webserver
 5. Copy the backup file (point 1) into the new version 1.0.3 under `/include/ost-config.php`
 6. Copy the backup file (point 2) into the new version 1.0.3 under `/config/config.ini`
@@ -44,7 +44,7 @@ A config file is also available under `/config/config.ini`. In this file you can
 
 1. Backup the file `/include/ost-config.php` of the version 1.0.3
 2. Backup the file `/config/config.ini` of the version 1.0.3
-3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest" target="_blank">latest version of osTicket-iQey</a>
 4. Extract the content in your webserver
 5. Copy the backup file (point 1) into the new installed version 1.0.4 under `/include/ost-config.php` (override the current ost-config.php)
 6. Open the config.ini 1.0.3 (point 2) and copy the section [iqey-setup] into the new `/config/config.ini` 1.0.4
@@ -54,7 +54,7 @@ A config file is also available under `/config/config.ini`. In this file you can
 
 1. Backup the file `/include/ost-config.php` of the version 1.0.4
 2. Backup the file `/config/config.ini` of the version 1.0.4
-3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest" target="_blank">latest version of osTicket-iQey</a>
 4. Extract the content in your webserver
 5. Copy the backup file (point 1) into the new version 1.0.5 under `/include/ost-config.php`
 6. Copy the backup file (point 2) into the new version 1.0.5 under `/config/config.ini`
@@ -63,7 +63,7 @@ A config file is also available under `/config/config.ini`. In this file you can
 
 1. Backup the file `/include/ost-config.php` of the version 1.0.5
 2. Backup the file `/config/config.ini` of the version 1.0.5
-3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest" target="_blank">latest version of osTicket-iQey</a>
 4. Extract the content in your webserver
 5. Copy the backup file (point 1) into the new version 1.0.6 under `/include/ost-config.php`
 6. Copy/Paste the backup properties (point 2) into the new version 1.0.6 under `/config/config.ini`
@@ -73,7 +73,7 @@ A config file is also available under `/config/config.ini`. In this file you can
 
 1. Backup the file `/include/ost-config.php` of the version 1.0.6
 2. Backup the file `/config/config.ini` of the version 1.0.6
-3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest" target="_blank">latest version of osTicket-iQey</a>
 4. Extract the content in your webserver
 5. Copy the backup file (point 1) into the new version 1.0.7 under `/include/ost-config.php`
 6. Copy the backup file (point 2) into the new version 1.0.7 under `/config/config.php`
@@ -82,10 +82,19 @@ A config file is also available under `/config/config.ini`. In this file you can
 
 1. Backup the file `/include/ost-config.php` of the version 1.0.7
 2. Backup the file `/config/config.ini` of the version 1.0.7
-3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest">latest version of osTicket-iQey</a>
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest" target="_blank">latest version of osTicket-iQey</a>
 4. Extract the content in your webserver
 5. Copy the backup file (point 1) into the new version 1.0.8 under `/include/ost-config.php`
 6. Copy the backup file (point 2) into the new version 1.0.8 under `/config/config.php`
+
+# Upgrade from the version 1.0.8 to the 1.0.9
+
+1. Backup the file `/include/ost-config.php` of the version 1.0.8
+2. Backup the file `/config/config.ini` of the version 1.0.8
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest" target="_blank">latest version of osTicket-iQey</a>
+4. Extract the content in your webserver
+5. Copy the backup file (point 1) into the new version 1.0.9 under `/include/ost-config.php`
+6. Copy the backup file (point 2) into the new version 1.0.9 under `/config/config.php`
 
 # Release new version
 
