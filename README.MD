@@ -105,6 +105,15 @@ A config file is also available under `/config/config.ini`. In this file you can
 5. Copy the backup file (point 1) into the new version 1.0.10 under `/include/ost-config.php`
 6. Copy the backup file (point 2) into the new version 1.0.10 under `/config/config.php`
 
+# Upgrade from the version 1.0.10 to the 1.0.11
+
+1. Backup the file `/include/ost-config.php` of the version 1.0.10
+2. Backup the file `/config/config.ini` of the version 1.0.10
+3. Download the <a href="https://github.com/mchavaillaz/osTicket-iQey/releases/latest" target="_blank">latest version of osTicket-iQey</a>
+4. Extract the content in your webserver
+5. Copy the backup file (point 1) into the new version 1.0.11 under `/include/ost-config.php`
+6. Copy the backup file (point 2) into the new version 1.0.11 under `/config/config.php`
+
 # Release new version
 
 Create a new release with Github.<br>
@@ -162,7 +171,7 @@ Install and configure multiple php versions on macOS High Sierra --> https://get
 Build the .phar using php56 like this:
 
 * Go to the directory `/include/i18n_working_directory`
-* Build the .phar `/usr/local/Cellar/php@5.6/5.6.36/bin/php build-phar.php`
+* Build the .phar `/usr/local/Cellar/php@5.6/5.6.36/bin/php ./build-phar.php`
 
 ### How to use translated text in a page?
 
