@@ -45,6 +45,7 @@ if ($lang) {
 		<script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/redactor-osticket.js"></script>
 		<script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/select2.min.js"></script>
 		<script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/fabric.min.js"></script>
+		<script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/os-check-utilities.js"></script>
 
         <?php
         if ($ost && ($headers = $ost->getExtraHeaders())) {

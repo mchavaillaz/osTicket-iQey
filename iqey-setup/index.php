@@ -47,8 +47,9 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
                 if ($propertyService->isWindowsDownloadEnable(ConfigSectionEnum::IQEY_SETUP)) {
                     ?>
 					<a href="<?php echo $propertyService->getWindowsDownloadUrl(ConfigSectionEnum::IQEY_SETUP, Internationalization::getCurrentLanguage()) ?>"
-					   class="button-secondary button-small"
-					   target="_blank">
+					   class="button-secondary disabled button-small download-link"
+					   target="_blank"
+					   for="win">
                         <?php echo __('Download'); ?>
 					</a>
                     <?php
@@ -69,8 +70,9 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
                 if ($propertyService->isMacDownloadEnable(ConfigSectionEnum::IQEY_SETUP)) {
                     ?>
 					<a href="<?php echo $propertyService->getMacDownloadUrl(ConfigSectionEnum::IQEY_SETUP, Internationalization::getCurrentLanguage()) ?>"
-					   class="button-secondary button-small"
-					   target="_blank">
+					   class="button-secondary disabled button-small download-link"
+					   target="_blank"
+					   for="mac">
                         <?php echo __('Download'); ?>
 					</a>
                     <?php
@@ -97,9 +99,35 @@ require(CLIENTINC_DIR . 'page-header.inc.php');
             <?php
             echo sprintf(__('iQey-Setup installation manual'), $propertyService->getIQeySetupManualUrl(Internationalization::getCurrentLanguage()));
             ?>
+			<br>
+			<br>
+			<p style="font-style: italic;">
+                <?php
+                echo __('Supported platform: Windows 7, 8 and 10, macOS 10.12 (Sierra) and higher');
+                ?>
+			</p>
 		</div>
 	</div>
 </div>
 <br>
 <br>
+<script>
+	window.onload = function () {
+		var downloadlinks = document.querySelectorAll('.download-link');
+		for (i in downloadlinks) {
+			if ('undefined' !== typeof downloadlinks[i].getAttribute) {
+				if (is_macos()) {
+					if (downloadlinks[i].getAttribute("for").includes("mac")) {
+						downloadlinks[i].className = "button-secondary button-small download-link";
+					}
+				}
+				else {
+					if (downloadlinks[i].getAttribute("for").includes("win")) {
+						downloadlinks[i].className = "button-secondary button-small download-link";
+					}
+				}
+			}
+		}
+	}
+</script>
 
